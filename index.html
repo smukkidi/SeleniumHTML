@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+
+/*
+#rcorners1 {
+  border-radius: 25px;
+  background: #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px;  
+}
+
+#rcorners2 {
+  border-radius: 25px;
+  border: 2px solid #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px;  
+}
+
+#rcorners3 {
+  border-radius: 25px;
+  background: url(paper.gif);
+
+  background-repeat: repeat;
+  padding: 20px; 
+  width: 200px;
+  height: 150px;  
+}
+
+.main_topmenu{
+  list-style-type: none;
+  background-position: left top;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+
+
+.menuiteam .active{
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+*/
+
+  :root {
+  --blue: #3498db;
+  --dark-blue: #2980b9;
+  --background: #081118;
+  --grey: #333;
+  --light-grey: #3b3b3b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  min-height: 100vh;
+  background: var(--background);
+}
+
+
+
+
+.menu {
+  width: 20rem;
+  border-radius: 0.2rem;
+  overflow: hidden;
+}
+
+
+.menu a {
+  text-decoration: none;
+}
+
+.menu-item {
+  list-style: none;
+  border-top: 1px solid var(--dark-blue);
+  overflow: hidden;
+}
+
+.btn {
+  display: block;
+  padding: 1rem 1.2rem;
+  background: var(--blue);
+  color: white;
+  position: relative;
+}
+.btn::before {
+  content: '';
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  background: var(--blue);
+  left: 1.5rem;
+  bottom: -0.5rem;
+  transform: rotate(45deg);
+}
+.btn i {
+  margin-right: 1rem;
+}
+
+.menu-item__sub {
+  background: var(--grey);
+  overflow: hidden;
+  transition: max-height 0.3s;
+  max-height: 0;
+}
+.menu-item__sub a {
+  display: block;
+  padding: 1rem 1.6rem;
+  color: white;
+  font-size: 0.9rem;
+  position: relative;
+  border-bottom: 1px solid var(--light-grey);
+}
+.menu-item__sub a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0.4rem;
+  height: 100%;
+  background: var(--blue);
+  transform: translatex(-0.4rem);
+  transition: 0.3s;
+  opacity: 0;
+}
+.menu-item__sub a:hover::before {
+  opacity: 1;
+  transform: translatex(0);
+}
+
+.menu-item:target .menu-item__sub {
+  max-height: 10em;
+}
+
+
+
+
+</style>
+</head>
+<body>
+<!--
+<ul class="main_topmenu">
+  <li class="menuiteam"><a class="active" href="#home">Home</a></li>
+  <li class="menuiteam"><a class="active" href="#news">News</a></li>
+  <li class="menuiteam"><a class="active" href="#contact">Contact</a></li>
+  <li class="menuiteam"><a class="active" href="#about">About</a></li>
+  
+</ul>
+
+
+
+  <div>
+		<a href="blob/gh-pages/rigistrationform.html">Forgot Password ?</a>
+	</div>
+-->
+  <div class="menu">
+    <li class="menu-item" id="input_form">
+      <a href="#input_form" class="btn" >
+        <i class="far fa-input-form"></i>
+        Input Form
+      </a>
+      <div class="menu-item__sub">
+        <a href="pages/Registrationform.html">Simple Form Demo</a>
+        <a href="#">Checkbox Demo</a>
+        <a href="#">Radio Buttons Demo</a>
+        <a href="#">Select Dropdown List</a>
+        <a href="#">Input Form Submit</a>
+        <a href="#">Ajax Form Submit</a>
+        <a href="#">Jquery Select Dropdown</a>
+    </div>
+    </li>
+  
+
+    <li class="menu-item" id="data_pickers">
+      <a href="#data_pickers" class="btn" >
+        <i class="far fa-date-picker"></i>
+        Date Pickers
+      </a>
+      <div class="menu-item__sub">
+        <a href="#">Bootstrap Date Picker</a>
+        <a href="#">JQuery Date Picker</a>
+      </div>
+    </li>
+  
+
+    <li class="menu-item" id="table">
+      <a href="#table" class="btn" >
+        <i class="far fa-table"></i>
+        Table
+      </a>
+      <div class="menu-item__sub">
+        <a href="#">Table Pagination</a>
+        <a href="#">Table Data Search</a>
+        <a href="#">Table Filter</a>
+        <a href="#">Table Sort & Search</a>
+        <a href="#">Table Data Download</a>        
+      </div>
+    </li>
+ 
+
+  
+    <li class="menu-item" id="progress_bar_slider">
+      <a href="#progress_bar_slider" class="btn" >
+        <i class="far fa-progress-bar-slider"></i>
+        Progress Bar & Slider
+      </a>
+      <div class="menu-item__sub">
+        <a href="#">JQuery Download Progress bars</a>
+        <a href="#">Bootstrap Progress bar</a>
+        <a href="#">Drag & Drop Sliders</a>
+      </div>
+    </li>
+  
+
+  
+    <li class="menu-item" id="alerts_modals">
+      <a href="#alerts_modals" class="btn" >
+        <i class="far fa-alerts-modals"></i>
+        Alerts & Modals
+      </a>
+      <div class="menu-item__sub">
+        <a href="#">Bootstrap Alerts</a>
+        <a href="#">JQuery Date Picker</a>
+        <a href="#">Bootstrap Modals</a>
+        <a href="#">Window Popup Modal</a>
+        <a href="#">Progress Bar Modal</a>
+        <a href="#">Javascript Alerts</a>
+        <a href="#">File Download</a>
+      </div>
+    </li>
+  
+
+
+    <li class="menu-item" id="list_box">
+      <a href="#list_box" class="btn" >
+        <i class="far fa-list-box"></i>
+        List Box
+      </a>
+      <div class="menu-item__sub">
+        <a href="#">Bootstrap List Box</a>
+        <a href="#">JQuery List Box</a>
+        <a href="#">Data List Filter</a>
+      </div>
+    </li>
+  
+
+  
+    <li class="menu-item" id="others">
+      <a href="#others" class="btn" >
+        <i class="far fa-others"></i>
+        Others
+      </a>
+      <div class="menu-item__sub">
+        <a href="#">Drag and Drop</a>
+        <a href="#">Dynamic Data Loading</a>
+        <a href="#">Charts Demo</a>
+      </div>
+    </li>
+  </div>
+
+</body>
+</html>
